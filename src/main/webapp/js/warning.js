@@ -9,16 +9,6 @@ var InlineWarning = (function () {
 
     exports.setup = function (opts) {
         options = opts;
-
-        // Check if the URL needs concatenation
-        if (opts.url.includes("'+'")) {
-            // Manually concatenate the parts
-            let parts = opts.url.split("'+'");
-            options.url = parts.map(part => part.replace(/'/g, '')).join('');
-        } else {
-            options.url = opts.url;
-        }
-
         return exports;
     };
 

@@ -4,7 +4,7 @@ import com.cloudbees.jenkins.GitHubPushTrigger
 
 tr {
     td(colspan: 4) {
-        def url = descriptor.getCheckMethod('hookRegistered').toCheckUrl()
+        def url = descriptor.getCheckMethod('hookRegistered').toStemUrl()
         def input = "input[name='${GitHubPushTrigger.class.getName().replace('.', '-')}']"
 
         div(id: 'gh-hooks-warn',
